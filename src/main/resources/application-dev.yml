@@ -1,5 +1,7 @@
 server:
   port: 8827
+  servlet:
+    context-path: /erp
 
 spring:
   datasource:
