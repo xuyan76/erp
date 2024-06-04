@@ -23,6 +23,15 @@ spring:
         format_sql: true
         use_sql_comments: true
 
+  threads:
+    virtual:
+      enable: true
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: ENC(hvqguR2lYf7G3VVbNMZCSDTU+ISOb70L)
+    timeout: 5000
 
 logging:
   level:
