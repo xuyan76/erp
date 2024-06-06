@@ -16,6 +16,10 @@ public class User {
     String code;
     @NotNull
     String name;
+    Integer status;
+    String mobile;
+    Long orgId;
+
     @NotNull
     Long createBy;
     @NotNull

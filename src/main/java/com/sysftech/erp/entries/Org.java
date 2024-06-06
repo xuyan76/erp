@@ -12,15 +12,28 @@ public class Org {
     @Id
     Long id;
     @NotNull
-    String name;
+    String shortName;
+    String fullName;
     @NotNull
     Long parentId;
     @NotNull
     String casCode;
+    Integer orgType;
+    Integer status;
+
+    String fax;
+    String address;
+    Double latitude;
+    Double longitude;
+    String geoHash;
+
     @NotNull
     Long createBy;
     @NotNull
     LocalDateTime createTime;
     Long updateBy;
     LocalDateTime updateTime;
+
+    String desc;
+    Integer orderNo;
 }
