@@ -48,12 +48,11 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.5'
-}
 
-hibernate {
-	enhancement {
-		enableAssociationManagement = true
-	}
+	implementation 'cn.hutool:hutool-all:5.8.28'
+
+	implementation 'jakarta.validation:jakarta.validation-api'
+
 }
 
 tasks.named('test') {
