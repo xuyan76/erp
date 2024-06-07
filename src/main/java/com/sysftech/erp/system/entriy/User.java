@@ -1,4 +1,4 @@
-package com.sysftech.erp.entries;
+package com.sysftech.erp.system.entriy;
 
 import jakarta.persistence.*;
 import lombok.Data;

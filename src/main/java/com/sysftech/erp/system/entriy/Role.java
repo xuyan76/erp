@@ -1,4 +1,4 @@
-package com.sysftech.erp.entries;
+package com.sysftech.erp.system.entriy;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -16,9 +16,12 @@ public class Role {
     Long Id;
     @NotNull
     String name;
+    Integer status;
     String desc;
     Long createBy;
     LocalDateTime createTime;
     Long updateBy;
     LocalDateTime updateTime;
+
+    String dashboard;
 }
