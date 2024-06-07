@@ -1,6 +1,6 @@
-package com.sysftech.erp.web;
+package com.sysftech.erp.system.web;
 
-import com.sysftech.erp.service.SystemService;
+import com.sysftech.erp.system.service.SystemService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;

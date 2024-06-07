@@ -1,9 +1,9 @@
-package com.sysftech.erp.service;
+package com.sysftech.erp.system.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
-public class DeviceService {
+public class OrderService {
 }

@@ -1,4 +1,4 @@
-package com.sysftech.erp.system.entriy;
+package com.sysftech.erp.system.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
