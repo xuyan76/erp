@@ -3,13 +3,13 @@ package com.sysftech.erp.system.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-@Data
 @Entity
-@Table(name = "sys_user_role")
-public class UserRole {
+@Data
+@Table(name = "sys_app_whitelist")
+public class AppWhitelist {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    Long userId;
-    Long roleId;
+    Integer id;
+    Integer appId;
+    Integer ipAddress;
 }

@@ -1,26 +1,24 @@
 package com.sysftech.erp.system.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-@Entity
 @Data
-@Table(name = "sys_role")
-public class Role {
+@Entity
+@Table(name = "sys_app")
+public class App implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long Id;
-    @NotNull
-    String name;
+    Integer id;
+    String title;
     Integer status;
-    String desc;
+    String clientId;
+    String clientSecurity;
     Long createBy;
     LocalDateTime createTime;
     Long updateBy;
     LocalDateTime updateTime;
-
-    String dashboard;
 }

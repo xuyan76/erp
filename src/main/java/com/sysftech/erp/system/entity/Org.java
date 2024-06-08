@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 @Table(name = "sys_org")
 public class Org {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     @NotNull
     String shortName;
