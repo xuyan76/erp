@@ -15,7 +15,7 @@ spring:
       connection-timeout: 30000
 
   jpa:
-    open-in-view: enable
+    open-in-view: true
     hibernate:
       ddl-auto: none
     show-sql: true
