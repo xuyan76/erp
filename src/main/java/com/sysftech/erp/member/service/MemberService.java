@@ -1,5 +1,6 @@
 package com.sysftech.erp.member.service;
 
+import com.sysftech.erp.member.repository.LevelRepository;
 import com.sysftech.erp.member.repository.MemberRepository;
 import com.sysftech.erp.member.repository.MemberThirdRepository;
 import jakarta.annotation.Resource;
@@ -20,4 +21,6 @@ public class MemberService {
     MemberRepository memberDao;
     @Resource
     MemberThirdRepository memberThirdDao;
+    @Resource
+    LevelRepository levelDao;
 }

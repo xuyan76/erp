@@ -1,0 +1,7 @@
+package com.sysftech.erp.member.repository;
+
+import com.sysftech.erp.member.entity.Level;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface LevelRepository extends JpaRepository<Level, Integer> {
+}

@@ -17,6 +17,7 @@ public class App implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
     String title;
+    Integer source;
     Integer status;
     String clientId;
     String clientSecurity;
