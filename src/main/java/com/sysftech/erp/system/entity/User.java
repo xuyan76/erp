@@ -1,11 +1,15 @@
 package com.sysftech.erp.system.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
 import jakarta.validation.constraints.NotNull;
+import lombok.*;
+
 import java.time.LocalDateTime;
 
-@Data
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
 @Entity
 @Table(name = "sys_user")
 public class User {

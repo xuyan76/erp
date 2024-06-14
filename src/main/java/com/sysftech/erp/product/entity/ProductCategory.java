@@ -1,29 +1,30 @@
-package com.sysftech.erp.system.entity;
+package com.sysftech.erp.product.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "bus_product_category")
 @Getter
 @Setter
 @ToString
 @RequiredArgsConstructor
-@Table(name = "sys_role")
-public class Role {
+public class ProductCategory {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long Id;
-    @NotNull
+    Integer id;
     String name;
-    Integer status;
     String desc;
+    String ico;
+    Integer sortNo;
+    Integer parentId;
+    String keywords;
+    Integer status;
     Long createBy;
     LocalDateTime createTime;
     Long updateBy;
     LocalDateTime updateTime;
-
-    String dashboard;
 }

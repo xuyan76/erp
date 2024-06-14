@@ -1,10 +1,13 @@
 package com.sysftech.erp.system.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 @Entity
-@Data
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
 @Table(name = "sys_app_whitelist")
 public class AppWhitelist {
     @Id

@@ -1,9 +1,12 @@
 package com.sysftech.erp.system.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
 @Entity
 @Table(name = "sys_user_role")
 public class UserRole {
