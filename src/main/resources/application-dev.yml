@@ -57,3 +57,8 @@ jasypt:
     algorithm: PBEWithMD5AndDES
     password: yousonofbitch
     iv-generator-classname: org.jasypt.iv.NoIvGenerator
+
+flyway:
+  enable: true
+  baselineOnMigrate: true
+  locations: classpath:db/migration
