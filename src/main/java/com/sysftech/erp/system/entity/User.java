@@ -21,10 +21,11 @@ public class User {
     String code;
     @NotNull
     String name;
+    String password;
     Integer status;
     String mobile;
     Long orgId;
-
+    String email;
     @NotNull
     Long createBy;
     @NotNull

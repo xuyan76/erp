@@ -1,4 +1,4 @@
-package com.sysftech.erp.common.dic;
+package com.sysftech.erp.common.enums;
 
 /**
  * 订单退货状态

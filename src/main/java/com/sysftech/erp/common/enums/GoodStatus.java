@@ -1,4 +1,4 @@
-package com.sysftech.erp.common.dic;
+package com.sysftech.erp.common.enums;
 
 /**
  * 商品状态

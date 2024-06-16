@@ -23,6 +23,7 @@ public class Third {
     Integer status;
     String logo;
     String ico;
+    Integer permitLogin;
     Long createBy;
     LocalDateTime createTime;
     Long updateBy;
