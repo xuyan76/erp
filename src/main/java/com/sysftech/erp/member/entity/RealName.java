@@ -22,5 +22,7 @@ public class RealName {
     Long id;
     String realName;
     String idCard;
+    String mobile;
+    Integer byWay;
     LocalDateTime createTime;
 }

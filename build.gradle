@@ -20,6 +20,7 @@ ext {
 	set('jasyptVersion', "3.0.5")
 	set('caffeineVersion', "3.1.8")
 	set('flywayVersion', '10.15.0')
+	set('guavaVersion', "31.1-jre")
 }
 
 configurations {
@@ -66,6 +67,7 @@ dependencies {
 	implementation "com.github.ben-manes.caffeine:caffeine:${caffeineVersion}"
 	implementation "org.flywaydb:flyway-core:${flywayVersion}"
 	implementation "org.flywaydb:flyway-mysql:${flywayVersion}"
+	implementation "com.google.guava:guava:${guavaVersion}"
 }
 
 tasks.named('test') {
