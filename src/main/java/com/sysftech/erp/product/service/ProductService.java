@@ -1,6 +1,6 @@
 package com.sysftech.erp.product.service;
 
-import com.sysftech.erp.product.repository.ProductCategoryRepository;
+import com.sysftech.erp.product.repository.ProductCategoryDao;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -9,5 +9,5 @@ import org.springframework.stereotype.Service;
 @Service
 public class ProductService {
     @Resource
-    ProductCategoryRepository productCategoryDao;
+    ProductCategoryDao productCategoryDao;
 }

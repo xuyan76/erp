@@ -1,20 +1,18 @@
 package com.sysftech.erp.contract.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-@Getter
-@Setter
-@ToString
-@RequiredArgsConstructor
-@Entity
-@Table(name = "bus_contract")
+@Data
+@TableName("bus_contract")
 public class Contract {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     Long id;
     String code;
     Long supplierId;
@@ -23,8 +21,10 @@ public class Contract {
     LocalDate validEnd;
 
     Long createBy;
+    @TableField(fill = FieldFill.INSERT)
     LocalDateTime createTime;
     Long updateBy;
+    @TableField(fill = FieldFill.UPDATE)
     LocalDateTime updateTime;
 
 }

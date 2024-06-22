@@ -4,11 +4,6 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 @Data
-@TableName("bus_order")
-public class Order {
-
-    private Long id;
-    private String code;
-
-
+@TableName("bus_order_pay")
+public class OrderPay {
 }
