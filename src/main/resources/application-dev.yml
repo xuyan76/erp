@@ -89,3 +89,7 @@ flyway:
   enable: true
   baselineOnMigrate: true
   locations: classpath:db/migration
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

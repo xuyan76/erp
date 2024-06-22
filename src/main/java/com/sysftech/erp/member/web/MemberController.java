@@ -25,7 +25,6 @@ public class MemberController {
     @PostMapping("/realname/verify")
     public ApiResponse<RealName> realNameVerify(@RequestBody @Valid RealNameParamDto rnDto){
         log.info("realNameVerify:{}" ,rnDto);
-        BaseSignDto bt = new BaseSignDto();
         return ResultBuilder.success(memberService.realNameVerify(rnDto.getIdCard(), rnDto.getName()));
     }
 
