@@ -3,7 +3,10 @@ package com.sysftech.erp.system.entity;
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.sysftech.erp.common.enums.OrgStatus;
+import com.sysftech.erp.common.enums.OrgType;
 import lombok.*;
+import org.apache.ibatis.type.EnumTypeHandler;
 
 import java.time.LocalDateTime;
 
@@ -12,13 +15,17 @@ import java.time.LocalDateTime;
 public class Org {
     Long id;
     String shortName;
-    String fullName;
+    String name;
     Long parentId;
     String casCode;
-    Integer orgType;
-    Integer status;
+    @TableField(value = "org_type", typeHandler = EnumTypeHandler.class)
+    OrgType orgType;
+    @TableField(typeHandler = EnumTypeHandler.class)
+    OrgStatus status;
 
     String fax;
+    String province;
+    String city;
     String address;
     Double latitude;
     Double longitude;
@@ -33,5 +40,5 @@ public class Org {
     LocalDateTime updateTime;
 
     String desc;
-    Integer orderNo;
+    Integer sortNo;
 }
