@@ -2,8 +2,8 @@ package com.sysftech.erp.contract.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Data
 @TableName("bus_contract")
 public class Contract {
-
+    @TableId
     Long id;
     String code;
     Long supplierId;

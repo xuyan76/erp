@@ -1,5 +1,6 @@
 package com.sysftech.erp.member.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
 @Data
 @TableName("cms_member")
 public class Member {
+    @TableId
     Long id;
     String code;
     Integer source;

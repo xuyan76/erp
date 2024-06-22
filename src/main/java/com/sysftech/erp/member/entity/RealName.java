@@ -2,6 +2,7 @@ package com.sysftech.erp.member.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 
@@ -16,6 +17,7 @@ import java.time.LocalDateTime;
 @TableName( "cms_real_name")
 @Data
 public class RealName {
+    @TableId
     Long id;
     String realName;
     String idCard;

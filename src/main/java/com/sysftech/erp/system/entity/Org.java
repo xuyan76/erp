@@ -2,6 +2,7 @@ package com.sysftech.erp.system.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.sysftech.erp.common.enums.OrgStatus;
 import com.sysftech.erp.common.enums.OrgType;
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
 @Data
 @TableName("sys_org")
 public class Org {
+    @TableId
     Long id;
     String shortName;
     String name;
