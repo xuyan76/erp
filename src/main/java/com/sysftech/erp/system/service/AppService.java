@@ -3,8 +3,8 @@ package com.sysftech.erp.system.service;
 import com.sysftech.erp.common.dto.AppDto;
 import com.sysftech.erp.system.entity.App;
 import com.sysftech.erp.system.entity.AppWhitelist;
-import com.sysftech.erp.system.repository.AppRepository;
-import com.sysftech.erp.system.repository.AppWhitelistRepository;
+import com.sysftech.erp.system.dao.AppDao;
+import com.sysftech.erp.system.dao.AppWhitelistDao;
 import jakarta.annotation.Resource;
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
@@ -17,9 +17,9 @@ import java.time.LocalDateTime;
 public class AppService {
 
     @Resource
-    AppRepository appDao;
+    AppDao appDao;
     @Resource
-    AppWhitelistRepository appWhitelistDao;
+    AppWhitelistDao appWhitelistDao;
 
     @Transactional(rollbackOn = Exception.class)
     public String save(AppDto appDto){
@@ -27,14 +27,13 @@ public class AppService {
         app.setTitle(appDto.getName());
         app.setStatus(Integer.valueOf("1"));
         app.setCreateBy(Long.valueOf("1"));
-        app.setCreateTime(LocalDateTime.now());
-        appDao.save(app);
+        appDao.insert(app);
         Integer i = app.getId();
 
         AppWhitelist ab = new AppWhitelist();
         ab.setAppId(i);
         ab.setIpAddress(i);
-        appWhitelistDao.save(ab);
+        appWhitelistDao.insert(ab);
         return i.toString();
     }
 }

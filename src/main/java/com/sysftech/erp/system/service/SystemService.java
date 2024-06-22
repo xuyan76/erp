@@ -1,7 +1,7 @@
 package com.sysftech.erp.system.service;
 
-import com.sysftech.erp.system.repository.OrgRepository;
-import com.sysftech.erp.system.repository.UserRepository;
+import com.sysftech.erp.system.dao.OrgDao;
+import com.sysftech.erp.system.dao.UserDao;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -11,9 +11,9 @@ import org.springframework.stereotype.Service;
 public class SystemService {
 
     @Resource
-    private UserRepository userDao;
+    private UserDao userDao;
 
     @Resource
-    private OrgRepository orgDao;
+    private OrgDao orgDao;
 
 }
