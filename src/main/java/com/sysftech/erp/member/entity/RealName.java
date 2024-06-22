@@ -1,6 +1,8 @@
 package com.sysftech.erp.member.entity;
 
-import jakarta.persistence.*;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -10,19 +12,16 @@ import java.time.LocalDateTime;
  * @author xuyan
  * @since 2024-06-15
  */
-@Entity
-@Table(name = "cms_real_name")
-@Getter
-@Setter
-@ToString
-@RequiredArgsConstructor
+
+@TableName( "cms_real_name")
+@Data
 public class RealName {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String realName;
     String idCard;
     String mobile;
     Integer byWay;
+
+    @TableField(fill = FieldFill.INSERT)
     LocalDateTime createTime;
 }

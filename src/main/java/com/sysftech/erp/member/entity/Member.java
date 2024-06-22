@@ -1,6 +1,6 @@
 package com.sysftech.erp.member.entity;
 
-import jakarta.persistence.*;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -8,16 +8,9 @@ import java.time.LocalDateTime;
 /**
  * 会员信息
  */
-@Entity
-@Table(name = "cms_member")
-@Getter
-@Setter
-@ToString
-@RequiredArgsConstructor
+@Data
+@TableName("cms_member")
 public class Member {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String code;
     Integer source;

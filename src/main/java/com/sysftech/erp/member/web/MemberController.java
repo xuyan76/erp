@@ -8,10 +8,8 @@ import com.sysftech.erp.common.utils.ResultBuilder;
 import com.sysftech.erp.member.entity.RealName;
 import com.sysftech.erp.member.service.MemberService;
 import jakarta.annotation.Resource;
-import jakarta.enterprise.inject.build.compatible.spi.Validation;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -25,7 +23,7 @@ public class MemberController {
     MemberService memberService;
 
     @PostMapping("/realname/verify")
-    public ApiResponse<Optional<RealName>> realNameVerify(@RequestBody @Valid RealNameParamDto rnDto){
+    public ApiResponse<RealName> realNameVerify(@RequestBody @Valid RealNameParamDto rnDto){
         log.info("realNameVerify:{}" ,rnDto);
         BaseSignDto bt = new BaseSignDto();
         return ResultBuilder.success(memberService.realNameVerify(rnDto.getIdCard(), rnDto.getName()));

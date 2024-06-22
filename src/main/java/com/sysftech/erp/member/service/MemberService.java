@@ -1,10 +1,10 @@
 package com.sysftech.erp.member.service;
 
 import com.sysftech.erp.member.entity.RealName;
-import com.sysftech.erp.member.repository.LevelRepository;
-import com.sysftech.erp.member.repository.MemberRepository;
-import com.sysftech.erp.member.repository.MemberThirdRepository;
-import com.sysftech.erp.member.repository.RealNameRepository;
+import com.sysftech.erp.member.dao.LevelDao;
+import com.sysftech.erp.member.dao.MemberDao;
+import com.sysftech.erp.member.dao.MemberThirdDao;
+import com.sysftech.erp.member.dao.RealNameDao;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -22,20 +22,20 @@ import java.util.Optional;
 public class MemberService {
 
     @Resource
-    MemberRepository memberDao;
+    MemberDao memberDao;
     @Resource
-    MemberThirdRepository memberThirdDao;
+    MemberThirdDao memberThirdDao;
     @Resource
-    LevelRepository levelDao;
+    LevelDao levelDao;
     @Resource
-    RealNameRepository realNameDao;
+    RealNameDao realNameDao;
 
     /**
      * 实名认下服务
      * @param idCard 身份证号
      * @param name 姓名
      */
-    public Optional<RealName> realNameVerify(String idCard, String name){
+    public RealName realNameVerify(String idCard, String name){
         return realNameDao.findByNameAndId(name, idCard);
     }
 }

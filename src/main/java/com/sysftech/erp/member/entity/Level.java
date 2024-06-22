@@ -1,20 +1,13 @@
 package com.sysftech.erp.member.entity;
 
-import jakarta.persistence.*;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 
-@Entity
-@Table(name = "cms_level")
-@Getter
-@Setter
-@ToString
-@RequiredArgsConstructor
+@Data
+@TableName("sys_level")
 public class Level {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
     String name;
     Integer status;
     Integer sortNo;
-
 }
