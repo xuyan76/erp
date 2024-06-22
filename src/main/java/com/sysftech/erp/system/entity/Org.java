@@ -1,27 +1,19 @@
 package com.sysftech.erp.system.entity;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Entity
-@Getter
-@Setter
-@ToString
-@RequiredArgsConstructor
-@Table(name = "sys_org")
+@Data
+@TableName("sys_org")
 public class Org {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    @NotNull
     String shortName;
     String fullName;
-    @NotNull
     Long parentId;
-    @NotNull
     String casCode;
     Integer orgType;
     Integer status;
@@ -32,11 +24,12 @@ public class Org {
     Double longitude;
     String geoHash;
 
-    @NotNull
+
     Long createBy;
-    @NotNull
+    @TableField(fill = FieldFill.INSERT)
     LocalDateTime createTime;
     Long updateBy;
+    @TableField(fill = FieldFill.UPDATE)
     LocalDateTime updateTime;
 
     String desc;

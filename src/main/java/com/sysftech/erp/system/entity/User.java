@@ -1,35 +1,28 @@
 package com.sysftech.erp.system.entity;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Getter
-@Setter
-@ToString
-@RequiredArgsConstructor
-@Entity
-@Table(name = "sys_user")
+@Data
+@TableName("sys_user")
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    @NotNull
     String code;
-    @NotNull
     String name;
     String password;
     Integer status;
     String mobile;
     Long orgId;
     String email;
-    @NotNull
     Long createBy;
-    @NotNull
+    @TableField(fill = FieldFill.INSERT)
     LocalDateTime createTime;
     Long updateBy;
+    @TableField(fill = FieldFill.UPDATE)
     LocalDateTime updateTime;
 }

@@ -1,28 +1,26 @@
 package com.sysftech.erp.system.entity;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Entity
-@Getter
-@Setter
-@ToString
-@RequiredArgsConstructor
-@Table(name = "sys_role")
+@Data
+@TableName("sys_role")
 public class Role {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     Long Id;
-    @NotNull
     String name;
     Integer status;
     String desc;
+
     Long createBy;
+    @TableField(fill = FieldFill.INSERT)
     LocalDateTime createTime;
     Long updateBy;
+    @TableField(fill = FieldFill.UPDATE)
     LocalDateTime updateTime;
 
     String dashboard;

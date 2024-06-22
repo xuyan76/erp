@@ -1,6 +1,8 @@
 package com.sysftech.erp.system.entity;
 
-import jakarta.persistence.*;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -8,16 +10,10 @@ import java.time.LocalDateTime;
 /**
  * 三方平台
  */
-@Entity
-@Table(name = "sys_third")
-@Getter
-@Setter
-@ToString
-@RequiredArgsConstructor
+@Data
+@TableName("sys_third")
 public class Third {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
     String name;
     Integer status;
@@ -25,7 +21,9 @@ public class Third {
     String ico;
     Integer permitLogin;
     Long createBy;
+    @TableField(fill = FieldFill.INSERT)
     LocalDateTime createTime;
     Long updateBy;
+    @TableField(fill = FieldFill.UPDATE)
     LocalDateTime updateTime;
 }
