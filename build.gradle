@@ -77,7 +77,8 @@ dependencies {
 	implementation "org.bouncycastle:bcprov-jdk18on:${bcprovVersion}"
 	implementation "cn.dev33:sa-token-spring-boot3-starter:${saTokenVersion}"
 	implementation "com.baomidou:mybatis-plus-spring-boot3-starter:${mybatisPlusVersion}"
-
+	// Sa-Token 插件：整合SSO
+	implementation 'cn.dev33:sa-token-sso:1.38.0'
 }
 
 tasks.named('test') {

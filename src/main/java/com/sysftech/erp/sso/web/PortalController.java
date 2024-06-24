@@ -17,8 +17,8 @@ public class PortalController {
     LoginService loginService;
 
     @RequestMapping("/login")
-    public String login() {
-        //log.debug(loginDto.toString());
+    public String login(LoginDto loginDto) {
+        log.debug(loginDto.toString());
         return "portal/login";
     }
 }
