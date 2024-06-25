@@ -2,6 +2,7 @@ package com.sysftech.erp.order.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.sysftech.erp.common.enums.OrderStatus;
 import com.sysftech.erp.common.enums.OrderType;
 import com.sysftech.erp.common.enums.RefundStatus;
 import lombok.Data;
@@ -16,6 +17,7 @@ public class Order {
     String code;
     OrderType type;
     LocalDateTime orderTime;
+    OrderStatus status;
 
     Long cashier;
     Integer deviceId;

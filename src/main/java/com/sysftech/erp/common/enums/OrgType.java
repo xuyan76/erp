@@ -19,8 +19,15 @@ public enum OrgType {
     OUTLET(4,"门店");
 
     @EnumValue
-    @JsonValue
-    final int code;
+    final Integer code;
     final String desc;
 
+    public static OrgType fromValue(int value) {
+        for (OrgType orgType : OrgType.values()) {
+            if (orgType.getCode() == value) {
+                return orgType;
+            }
+        }
+        throw new IllegalArgumentException(String.format("无效的部门类型[%d]", value));
+    }
 }

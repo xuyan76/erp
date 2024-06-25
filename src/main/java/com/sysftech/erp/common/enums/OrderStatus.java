@@ -1,6 +1,7 @@
 package com.sysftech.erp.common.enums;
 
 
+import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -10,9 +11,11 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum OrderStatus {
-    Pending(1);
+    PENDING(1, "处理中");
 
+    @JsonValue
     final int value;
+    final String desc;
 
     public static OrderStatus fromValue(int value){
         for (OrderStatus status: OrderStatus.values()){

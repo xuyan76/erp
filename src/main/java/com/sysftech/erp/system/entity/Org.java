@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler;
 import com.sysftech.erp.common.enums.OrgStatus;
 import com.sysftech.erp.common.enums.OrgType;
 import lombok.*;
@@ -20,9 +21,9 @@ public class Org {
     String name;
     Long parentId;
     String casCode;
-    @TableField(value = "org_type", typeHandler = EnumTypeHandler.class)
-    OrgType orgType;
-    @TableField(typeHandler = EnumTypeHandler.class)
+    @TableField(typeHandler = MybatisEnumTypeHandler.class)
+    OrgType type;
+    @TableField(typeHandler = MybatisEnumTypeHandler.class)
     OrgStatus status;
 
     String fax;
@@ -41,6 +42,6 @@ public class Org {
     @TableField(fill = FieldFill.UPDATE)
     LocalDateTime updateTime;
 
-    String desc;
+    String description;
     Integer sortNo;
 }

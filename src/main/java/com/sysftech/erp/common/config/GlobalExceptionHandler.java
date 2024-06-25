@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ApiResponse<Object> handleException(Exception e){
-        return ResultBuilder.fail(500, e.getLocalizedMessage());
+        log.debug(e.getMessage());
+        return ResultBuilder.fail(500, e.getMessage());
     }
 }
